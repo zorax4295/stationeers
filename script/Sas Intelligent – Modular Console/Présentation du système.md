@@ -115,3 +115,25 @@ Le programme de contrôle gère la sécurité et les conditions de démarrage du
 - Si une condition échoue (pression, gaz, SOS, accès) :
 
   - Le programme bloque le démarrage et Sas Core ne peut pas démarrer son cycle.
+
+## Fonctionnement du Programme d’Accès
+
+Le programme d’accès gère l’autorisation d’entrée au sas à l’aide d’un lecteur de carte.
+Chaque carte correspond à une catégorie d’utilisateur représentée par une couleur.
+Le programme compare la carte insérée avec les autorisations définies et détermine si l’accès est accordé ou refusé.
+
+### Principe de fonctionnement
+
+Lorsqu’une carte est insérée, le programme identifie sa couleur.
+Il vérifie ensuite si cette carte est autorisée pour un accès normal ou pour un accès maintenance.
+Selon le résultat, le lecteur de carte affiche une couleur indiquant le niveau d’accès accordé.
+
+### Indicateurs visuels
+
+Le lecteur de carte affiche une couleur selon le type d’accès accordé :
+
+🟢 Vert → Carte acceptée (accès normal)
+
+🟡 Jaune → Carte acceptée avec accès maintenance
+
+🔴 Rouge → Carte refusée
