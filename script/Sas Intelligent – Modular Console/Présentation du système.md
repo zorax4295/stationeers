@@ -3,6 +3,14 @@
 
 Ce système de sas automatisé permet de gérer l’ouverture et la fermeture des portes, la ventilation et la sécurité du sas de manière autonome. Il utilise des appareils du mod Modular Consol pour contrôler le sas et superviser les conditions de pression et de sécurité.
 
+## Le système est composé de trois programmes indépendants :
+
+- Sas Core : gère le fonctionnement interne du sas (portes, ventilation, éclairage).
+
+- Contrôle : vérifie les conditions de sécurité avant le démarrage.
+
+- Accès : gère les autorisations utilisateur via carte d’accès.
+
 ## Appareils utilisés par le programme “Sas Core”
 ### Portes et ventilation
 
@@ -137,5 +145,6 @@ Le lecteur de carte affiche une couleur selon le type d’accès accordé :
 🟡 Jaune → Carte acceptée avec accès maintenance
 
 🔴 Rouge → Carte refusée
+
 
 
