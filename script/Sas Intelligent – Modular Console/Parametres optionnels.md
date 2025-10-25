@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> Ses trois constante son déjà intégré au programme elle ne doivent pas être rajouter mais modifié
+> Les constante son déjà intégré au programme elle ne doivent pas être rajouter mais modifié.
 
 > [!WARNING]
 > Seules ces trois constantes sont destinées à être modifiées par l’utilisateur.
@@ -53,3 +53,4 @@ define pressureexter 25
 
 **Utilité :** permet de choisir le sens de fonctionnement par défaut après un redémarrage.
 Le programme alterne automatiquement le sens après chaque cycle complet.
+
