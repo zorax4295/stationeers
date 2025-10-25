@@ -79,3 +79,39 @@ Le bouton aquitter SOS permet de quitter l’état d’interruption et de reveni
 Housing Accès : contrôle l’accès aux commandes du sas pour les utilisateurs.
 
 Housing Contrôle : n’agit pas directement dans ce programme, il est utilisé pour autoriser ou bloquer le démarrage du sas selon les conditions de sécurité (pression correcte, gaz nocif, etc.).
+
+## Fonctionnement du Programme de Contrôle
+
+Le programme de contrôle gère la sécurité et les conditions de démarrage du sas. Il ne gère pas directement les portes ou la ventilation (c’est le rôle de Sas Core), mais décide si celui si peut démarrer et si les conditions sont sûres pour un cycle.
+
+### Vérifications et conditions
+
+- Autorisation de démarrage :
+
+  - Le programme vérifie que le cycle peut démarrer via l’interrupteur de cycle et la carte d’accès.
+
+  - Il bloque le démarrage si un signal SOS est actif.
+
+- Analyse du sas et du réservoir :
+
+  - Mesure la pression, la température, et les différents ratios de gaz et polluants à l’intérieur du sas et du réservoir.
+
+  - Conditions du réservoir : pression entre 10 et 45 MPa, température autour de 20 °C, gaz et polluants dans les limites de sécurité.
+
+  - Conditions du sas : pression proche de 100 kPa, température autour de 20 °C, gaz et polluants dans les limites de sécurité.
+
+- Prêt pour démarrage :
+
+  - Si toutes les conditions sont respectées, le cycle est marqué comme prêt, et une diode verte (Diode Cycle Prêt) s’allume.
+
+  - Si les conditions ne sont pas remplies, la diode devient rouge et le cycle est bloqué.
+
+### Interaction avec Sas Core
+
+- Quand le cycle est prêt et que tous les contrôles sont validés :
+
+  - Le programme active le démarrage (IC.Setting = 1) qui permet à Sas Core d’exécuter le fonctionnement du sas (portes, ventilateurs, éclairage).
+
+- Si une condition échoue (pression, gaz, SOS, accès) :
+
+  - Le programme bloque le démarrage et Sas Core ne peut pas démarrer son cycle.
