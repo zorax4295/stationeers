@@ -24,7 +24,7 @@ Ce système de sas automatisé permet de gérer l’ouverture et la fermeture de
 
 - Interrupteur Maintenance
 
-- Bouton aquitter SOS
+- Bouton acquitter SOS
 
 ### Éclairage
 
@@ -82,7 +82,7 @@ Housing Contrôle : n’agit pas directement dans ce programme, il est utilisé 
 
 ## Fonctionnement du Programme de Contrôle
 
-Le programme de contrôle gère la sécurité et les conditions de démarrage du sas. Il ne gère pas directement les portes ou la ventilation (c’est le rôle de Sas Core), mais décide si celui si peut démarrer et si les conditions sont sûres pour un cycle.
+Le programme de contrôle gère la sécurité et les conditions de démarrage du sas. Il ne gère pas directement les portes ou la ventilation (c’est le rôle de Sas Core), mais décide si celui-ci peut démarrer et si les conditions sont sûres pour un cycle.
 
 ### Vérifications et conditions
 
@@ -137,4 +137,5 @@ Le lecteur de carte affiche une couleur selon le type d’accès accordé :
 🟡 Jaune → Carte acceptée avec accès maintenance
 
 🔴 Rouge → Carte refusée
+
 
