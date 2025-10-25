@@ -3,7 +3,7 @@
 Ce fichier présente les paramètres que l’utilisateur peut modifier librement dans le programme afin d’adapter le comportement du sas à son environnement ou à ses préférences.
 Ces modifications ne sont pas obligatoires, mais permettent d’ajuster la pression ou le sens initial du cycle.
 
-## 🔧 Paramètres disponibles
+## 🔧 Paramètres disponibles programme [sas core](sas%20core/instruction.xml)
 ### @PressureInter
 
 **Valeur par défaut :** `100 kPa`
@@ -53,3 +53,4 @@ Le programme alterne automatiquement le sens après chaque cycle complet.
 > Seules ces trois constantes sont destinées à être modifiées par l’utilisateur.
 > Les autres éléments du code gèrent la logique interne et ne doivent pas être modifiés sans connaissance approfondie du programme.
 > Après toute modification, redémarrez l’IC Housing concerné pour appliquer les changements.
+
