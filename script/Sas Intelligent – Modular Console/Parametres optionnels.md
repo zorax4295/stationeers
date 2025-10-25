@@ -1,3 +1,11 @@
+> [!IMPORTANT]
+> Ses trois constante son déjà intégré au programme elle ne doivent pas être rajouter mais modifié
+
+> [!WARNING]
+> Seules ces trois constantes sont destinées à être modifiées par l’utilisateur.
+> Les autres éléments du code gèrent la logique interne et ne doivent pas être modifiés sans connaissance approfondie du programme.
+> Après toute modification, redémarrez l’IC Housing concerné pour appliquer les changements.
+
 # Paramètres optionnels
 
 Ce fichier présente les paramètres que l’utilisateur peut modifier librement dans le programme afin d’adapter le comportement du sas à son environnement ou à ses préférences.
@@ -45,12 +53,3 @@ define pressureexter 25
 
 **Utilité :** permet de choisir le sens de fonctionnement par défaut après un redémarrage.
 Le programme alterne automatiquement le sens après chaque cycle complet.
-
-> [!IMPORTANT]
-> Ses trois constante son déjà intégré au programme elle ne doivent pas être rajouter mais modifié
-
-> [!WARNING]
-> Seules ces trois constantes sont destinées à être modifiées par l’utilisateur.
-> Les autres éléments du code gèrent la logique interne et ne doivent pas être modifiés sans connaissance approfondie du programme.
-> Après toute modification, redémarrez l’IC Housing concerné pour appliquer les changements.
-
