@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InstructionData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DateTime>134057134270036700</DateTime>
+  <GameVersion>0.2.5954.26176</GameVersion>
+  <Title>sas avec ic 3.0 basic</Title>
+  <Description>besoin de - controle sas 3.0 basic</Description>
+  <Author>zorax4295</Author>
+  <WorkshopFileHandle>0</WorkshopFileHandle>
+  <Instructions>define pressureinter 100 #l.28
+define pressureexter 0 #l.29
+define senscycle 0 #l.30
+move r6 0 #l.68
+bne senscycle 1 7 #l.31
+move r5 1 #l.32
+j 8 #l.33
+move r5 0 #l.34
+s d3 Lock 1 #l.37
+s d2 Lock 1 #l.38
+sb -1535893860 Lock 1 #l.39
+sb -1535893860 On 0 #l.40
+sb 1514476632 Lock 1 #l.41
+sb 1514476632 On 1 #l.42
+sbn -128473777 1110840075 Setting 0 #l.43
+move r3 0 #l.44
+move r5 0 #l.45
+sbn 1462769197 -1742925502 Color 0 #l.46
+yield #l.49
+lbn r10 -128473777 1110840075 Setting 3 #l.50
+lbn r9 1773255945 -1458014402 On 3 #l.51
+l r8 d5 Setting #l.52
+lbn r7 -1446063838 339221119 Activate 3 #l.53
+seq r2 r8 2 #l.54
+seq r1 r9 1 #l.54
+and r0 r2 r1 #l.54
+beqz r0 28 #l.54
+j 154 #l.55
+bne r7 1 30 #l.57
+j 170 #l.58
+bne r5 0 34 #l.60
+s d0 Lock 0 #l.61
+s d1 Lock 1 #l.62
+j 36 #l.63
+s d0 Lock 1 #l.64
+s d1 Lock 0 #l.65
+seq r2 r10 1 #l.67
+seq r0 r5 0 #l.67
+and r1 r2 r0 #l.67
+beqz r1 52 #l.67
+add sp 6 r6 #l.68
+push ra #l.68
+add r6 r6 1 #l.68
+jal 68 #l.68
+sub r6 r6 1 #l.68
+add sp 7 r6 #l.68
+pop ra #l.68
+move r5 1 #l.69
+sbn -128473777 1110840075 Setting 0 #l.70
+move r3 0 #l.71
+yield #l.72
+j 67 #l.67
+seq r2 r10 1 #l.73
+seq r0 r5 1 #l.73
+and r1 r2 r0 #l.73
+beqz r1 67 #l.73
+add sp 6 r6 #l.74
+push ra #l.74
+add r6 r6 1 #l.74
+jal 111 #l.74
+sub r6 r6 1 #l.74
+add sp 7 r6 #l.74
+pop ra #l.74
+move r5 0 #l.75
+sbn -128473777 1110840075 Setting 0 #l.76
+move r3 0 #l.77
+yield #l.78
+j 18 #l.80
+lbn r9 1773255945 -1458014402 On 3 #l.83
+l r8 d5 Setting #l.84
+seq r2 r8 2 #l.85
+seq r0 r9 1 #l.85
+and r1 r2 r0 #l.85
+beqz r1 75 #l.85
+j 154 #l.86
+lbn r7 -1446063838 339221119 Activate 3 #l.88
+bne r7 1 78 #l.89
+j 170 #l.90
+l r4 d4 Pressure #l.92
+bne r3 0 88 #l.93
+sb -1535893860 On 1 #l.94
+sb 1514476632 On 0 #l.95
+s d0 Lock 1 #l.96
+s d0 Open 0 #l.97
+yield #l.98
+s d2 Mode 1 #l.99
+s d2 On 1 #l.100
+add r3 r3 1 #l.101
+seq r2 r3 1 #l.103
+seq r0 r4 0 #l.103
+and r1 r2 r0 #l.103
+beqz r1 100 #l.103
+yield #l.104
+s d2 On 0 #l.105
+sleep 1 #l.106
+s d3 Mode 0 #l.107
+yield #l.108
+s d2 PressureExternal pressureexter #l.109
+s d3 On 1 #l.110
+add r3 r3 1 #l.111
+seq r2 r3 2 #l.113
+sge r0 r4 pressureexter #l.113
+and r1 r2 r0 #l.113
+beqz r1 110 #l.113
+yield #l.114
+s d3 On 0 #l.115
+s d1 Open 1 #l.116
+sb -1535893860 On 0 #l.117
+sb 1514476632 On 1 #l.118
+j ra #l.119
+j 68 #l.121
+lbn r9 1773255945 -1458014402 On 3 #l.124
+l r8 d5 Setting #l.125
+seq r2 r8 2 #l.126
+seq r1 r9 1 #l.126
+and r0 r2 r1 #l.126
+beqz r0 118 #l.126
+j 154 #l.127
+lbn r7 -1446063838 339221119 Activate 3 #l.129
+bne r7 1 121 #l.130
+j 170 #l.131
+l r4 d4 Pressure #l.133
+bne r3 0 131 #l.134
+sb -1535893860 On 1 #l.135
+sb 1514476632 On 0 #l.136
+s d1 Lock 1 #l.137
+s d1 Open 0 #l.138
+yield #l.139
+s d3 Mode 1 #l.140
+s d3 On 1 #l.141
+add r3 r3 1 #l.142
+seq r2 r3 1 #l.144
+seq r0 r4 0 #l.144
+and r1 r2 r0 #l.144
+beqz r1 143 #l.144
+yield #l.145
+s d3 On 0 #l.146
+sleep 1 #l.147
+s d2 Mode 0 #l.148
+yield #l.149
+s d2 PressureExternal pressureinter #l.150
+s d2 On 1 #l.151
+add r3 r3 1 #l.152
+seq r2 r3 2 #l.154
+sge r0 r4 pressureinter #l.154
+and r1 r2 r0 #l.154
+beqz r1 153 #l.154
+yield #l.155
+s d2 On 0 #l.156
+s d0 Open 1 #l.157
+sb -1535893860 On 0 #l.158
+sb 1514476632 On 1 #l.159
+j ra #l.160
+j 111 #l.162
+s d2 On 0 #l.165
+s d3 On 0 #l.166
+sb -1535893860 On 0 #l.167
+sb 1514476632 On 1 #l.168
+s d2 Lock 0 #l.170
+s d3 Lock 0 #l.171
+s d0 Lock 0 #l.172
+s d1 Lock 0 #l.173
+lbn r9 1773255945 -1458014402 On 3 #l.174
+l r8 d5 Setting #l.175
+sne r2 r8 2 #l.176
+seq r1 r9 0 #l.176
+or r0 r2 r1 #l.176
+beqz r0 169 #l.176
+j 8 #l.177
+j 158 #l.179
+s db Setting 1 #l.182
+s d2 On 0 #l.183
+s d3 On 0 #l.184
+sbn 1462769197 -1742925502 Color 4 #l.185
+yield #l.186
+sbn 1462769197 -1742925502 Color 5 #l.187
+l r0 d5 Setting #l.188
+seq r2 r0 2 #l.188
+lbn r0 1462769197 -1742925502 Activate 3 #l.188
+seq r1 r0 1 #l.188
+and r0 r2 r1 #l.188
+beqz r0 184 #l.188
+s db Setting 0 #l.189
+j 8 #l.190
+j 170 #l.192
+# Compiled at 2025-10-24 15:08 by Exca's Basic10.</Instructions>
+</InstructionData>
