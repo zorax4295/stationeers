@@ -1,4 +1,4 @@
-# Système de Sas – Modular Consol
+# Sas Intelligent – Modular Console
 ## Description
 
 Ce système de sas automatisé permet de gérer l’ouverture et la fermeture des portes, la ventilation et la sécurité du sas de manière autonome. Il utilise des appareils du mod Modular Consol pour contrôler le sas et superviser les conditions de pression et de sécurité.
@@ -137,3 +137,4 @@ Le lecteur de carte affiche une couleur selon le type d’accès accordé :
 🟡 Jaune → Carte acceptée avec accès maintenance
 
 🔴 Rouge → Carte refusée
+
