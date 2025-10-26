@@ -55,3 +55,15 @@ Les noms indiqués dans la colonne Nom requis doivent être appliqués exactemen
 | Appareil | Commentaire | Connexion | Nom de l'appareil |
 | :------: | :---------: | :-------: | :---------------: |
 | Access Card Reader | Permet la lecture des cartes | Batch name | Access Card Reader |
+
+## ✅ Test initial
+
+- [ ] Allumez l’APC ou le transformateur d’alimentation.
+
+- [ ] Insérez une carte d’accès valide dans le lecteur.
+
+- [ ] Vérifiez que la diode "Cycle Prêt" devient verte.
+
+- [ ] Activez l’interrupteur Cycle Sas pour lancer le premier test.
+
+Surveillez les jauges de pression
