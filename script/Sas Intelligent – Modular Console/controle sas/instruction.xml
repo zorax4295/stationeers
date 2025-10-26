@@ -1,185 +1,195 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <InstructionData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <DateTime>134058593455204513</DateTime>
+  <DateTime>134058846433607303</DateTime>
   <GameVersion>0.2.5954.26176</GameVersion>
-  <Title>controle sas avec ic 3.0 basic</Title>
-  <Description>besoin de - sas avec ic 3.0 basic</Description>
+  <Title>sas avec ic 3.0 basic</Title>
+  <Description>besoin de - controle sas 3.0 basic</Description>
   <Author>zorax4295</Author>
   <WorkshopFileHandle>0</WorkshopFileHandle>
-  <Instructions>define pressureintermax 300 #l.28
-define pressuretarget 100 #l.29
-define pressuretank 45000 #l.30
-define temperaturetarget 293.15 #l.31
-yield #l.39
-lbn r11 -1095397205 -416464569 Open 2 #l.40
-move sp 6 #l.40
-push r11 #l.40
-l r11 d0 Setting #l.41
-push r11 #l.41
-l r11 d1 Setting #l.42
-push r11 #l.42
-l r0 d3 Pressure #l.45
-div r1 r0 pressuretank #l.45
-sbn -1013553731 294108521 Setting r1 #l.45
-l r0 d2 Pressure #l.46
-div r1 r0 pressureintermax #l.46
-sbn -1013553731 -673679062 Setting r1 #l.46
-jal 52 #l.49
-jal 112 #l.49
-move sp 11 #l.49
-pop r11 #l.49
-pop r12 #l.49
-and r0 r11 r12 #l.49
-beqz r0 29 #l.49
-move sp 11 #l.50
-push 1 #l.50
-sbn 1829854055 -1952270472 Color 2 #l.51
-j 32 #l.54
-move sp 11 #l.55
-push 0 #l.55
-sbn 1829854055 -1952270472 Color 4 #l.56
-move sp 7 #l.60
-pop r11 #l.60
-seq r4 r11 0 #l.60
-move sp 8 #l.60
-pop r11 #l.60
-sne r3 r11 0 #l.60
-move sp 9 #l.60
-pop r11 #l.60
-sne r2 r11 1 #l.60
-move sp 12 #l.60
-pop r11 #l.60
-seq r1 r11 1 #l.60
-and r0 r2 r1 #l.60
-and r1 r3 r0 #l.60
-and r0 r4 r1 #l.60
-beqz r0 51 #l.60
-yield #l.61
-sbn -1095397205 -416464569 Open 1 #l.62
-s db Setting 1 #l.63
-j 4 #l.65
-l r11 d3 Pressure #l.68
-l r12 d3 Temperature #l.69
-move sp 13 #l.69
-push r12 #l.69
-l r12 d3 RatioOxygen #l.70
-push r12 #l.70
-l r12 d3 RatioCarbonDioxide #l.71
-push r12 #l.71
-l r12 d3 RatioVolatiles #l.72
-push r12 #l.72
-l r12 d3 RatioPollutant #l.73
-push r12 #l.73
-l r12 d3 RatioLiquidPollutant #l.74
-push r12 #l.74
-l r12 d3 RatioNitrousOxide #l.75
-push r12 #l.75
-l r10 d3 RatioLiquidNitrousOxide #l.76
-sle r1 r11 45000 #l.77
-sge r0 r11 10000 #l.77
-move sp 12 #l.77
-push r11 #l.77
-and r9 r1 r0 #l.77
-abs r0 temperaturetarget #l.77
-div r1 1 r0 #l.77
-move sp 14 #l.77
-pop r11 #l.77
-sap r7 temperaturetarget r11 r1 #l.77
-move sp 15 #l.77
-pop r11 #l.77
-sap r5 0.3 r11 0.01667 #l.77
-move sp 16 #l.77
-pop r11 #l.77
-sap r4 0.02 r11 0.25 #l.77
-move sp 17 #l.78
-pop r11 #l.78
-seq r8 r11 0 #l.78
-move sp 18 #l.78
-pop r11 #l.78
-seq r6 r11 0 #l.78
-move sp 20 #l.78
-pop r11 #l.78
-seq r3 r11 0 #l.78
-pop r11 #l.78
-seq r2 r11 0 #l.78
-seq r0 r10 0 #l.78
-and r1 r2 r0 #l.78
-and r0 r3 r1 #l.78
-and r1 r6 r0 #l.78
-and r0 r8 r1 #l.78
-and r1 r4 r0 #l.77
-and r0 r5 r1 #l.77
-and r1 r7 r0 #l.77
-and r0 r9 r1 #l.77
-beqz r0 109 #l.77
-move sp 10 #l.79
-push 1 #l.79
-j ra #l.79
-move sp 10 #l.81
-push 0 #l.81
-j ra #l.81
-l r11 d4 Pressure #l.84
-move sp 12 #l.84
-push r11 #l.84
-l r11 d4 Temperature #l.85
-push r11 #l.85
-l r11 d4 RatioOxygen #l.86
-push r11 #l.86
-l r11 d4 RatioCarbonDioxide #l.87
-push r11 #l.87
-l r11 d4 RatioVolatiles #l.88
-push r11 #l.88
-l r11 d4 RatioPollutant #l.89
-push r11 #l.89
-l r11 d4 RatioLiquidPollutant #l.90
-push r11 #l.90
-l r11 d4 RatioNitrousOxide #l.91
-push r11 #l.91
-l r10 d4 RatioLiquidNitrousOxide #l.92
-add r0 pressuretarget 2 #l.93
-move sp 13 #l.93
-pop r11 #l.93
-sle r2 r11 r0 #l.93
-sub r1 pressuretarget 2 #l.93
-sge r0 r11 r1 #l.93
-and r9 r2 r0 #l.93
-abs r0 temperaturetarget #l.93
-div r1 1 r0 #l.93
-move sp 14 #l.93
-pop r11 #l.93
-sap r7 temperaturetarget r11 r1 #l.93
-move sp 15 #l.93
-pop r11 #l.93
-sap r5 0.3 r11 0.01667 #l.93
-move sp 16 #l.93
-pop r11 #l.93
-sap r4 0.02 r11 0.25 #l.93
-move sp 17 #l.94
-pop r11 #l.94
-seq r8 r11 0 #l.94
-move sp 18 #l.94
-pop r11 #l.94
-seq r6 r11 0 #l.94
-move sp 20 #l.94
-pop r11 #l.94
-seq r3 r11 0 #l.94
-pop r11 #l.94
-seq r2 r11 0 #l.94
-seq r0 r10 0 #l.94
-and r1 r2 r0 #l.94
-and r0 r3 r1 #l.94
-and r1 r6 r0 #l.94
-and r0 r8 r1 #l.94
-and r1 r4 r0 #l.93
-and r0 r5 r1 #l.93
-and r1 r7 r0 #l.93
-and r0 r9 r1 #l.93
-beqz r0 172 #l.93
-move sp 9 #l.95
-push 1 #l.95
-j ra #l.95
-move sp 9 #l.97
-push 0 #l.97
-j ra #l.97
-# Compiled at 2025-10-26 08:44 by Exca's Basic10.</Instructions>
+  <Instructions>define pressureinter 100 #l.28
+define pressureexter 0 #l.29
+define senscycle 0 #l.30
+move r6 0 #l.68
+bne senscycle 1 7 #l.31
+move r5 1 #l.32
+j 8 #l.33
+move r5 0 #l.34
+s d3 Lock 1 #l.37
+s d2 Lock 1 #l.38
+sb -1535893860 Lock 1 #l.39
+sb -1535893860 On 0 #l.40
+sb 1514476632 Lock 1 #l.41
+sb 1514476632 On 1 #l.42
+sbn -128473777 1110840075 Setting 0 #l.43
+move r3 0 #l.44
+move r5 0 #l.45
+sbn 1462769197 -42357944 Color 0 #l.46
+yield #l.49
+lbn r10 -128473777 1110840075 Setting 3 #l.50
+lbn r9 1773255945 -1458014402 On 3 #l.51
+l r8 d5 Setting #l.52
+lbn r7 -1446063838 339221119 Activate 3 #l.53
+seq r2 r8 2 #l.54
+seq r1 r9 1 #l.54
+and r0 r2 r1 #l.54
+beqz r0 28 #l.54
+j 154 #l.55
+bne r7 1 30 #l.57
+j 170 #l.58
+bne r5 0 34 #l.60
+s d0 Lock 0 #l.61
+s d1 Lock 1 #l.62
+j 36 #l.63
+s d0 Lock 1 #l.64
+s d1 Lock 0 #l.65
+seq r2 r10 1 #l.67
+seq r0 r5 0 #l.67
+and r1 r2 r0 #l.67
+beqz r1 52 #l.67
+add sp 6 r6 #l.68
+push ra #l.68
+add r6 r6 1 #l.68
+jal 68 #l.68
+sub r6 r6 1 #l.68
+add sp 7 r6 #l.68
+pop ra #l.68
+move r5 1 #l.69
+sbn -128473777 1110840075 Setting 0 #l.70
+move r3 0 #l.71
+yield #l.72
+j 67 #l.67
+seq r2 r10 1 #l.73
+seq r0 r5 1 #l.73
+and r1 r2 r0 #l.73
+beqz r1 67 #l.73
+add sp 6 r6 #l.74
+push ra #l.74
+add r6 r6 1 #l.74
+jal 111 #l.74
+sub r6 r6 1 #l.74
+add sp 7 r6 #l.74
+pop ra #l.74
+move r5 0 #l.75
+sbn -128473777 1110840075 Setting 0 #l.76
+move r3 0 #l.77
+yield #l.78
+j 18 #l.80
+lbn r9 1773255945 -1458014402 On 3 #l.83
+l r8 d5 Setting #l.84
+seq r2 r8 2 #l.85
+seq r0 r9 1 #l.85
+and r1 r2 r0 #l.85
+beqz r1 75 #l.85
+j 154 #l.86
+lbn r7 -1446063838 339221119 Activate 3 #l.88
+bne r7 1 78 #l.89
+j 170 #l.90
+l r4 d4 Pressure #l.92
+bne r3 0 88 #l.93
+sb -1535893860 On 1 #l.94
+sb 1514476632 On 0 #l.95
+s d0 Lock 1 #l.96
+s d0 Open 0 #l.97
+yield #l.98
+s d2 Mode 1 #l.99
+s d2 On 1 #l.100
+add r3 r3 1 #l.101
+seq r2 r3 1 #l.103
+seq r0 r4 0 #l.103
+and r1 r2 r0 #l.103
+beqz r1 100 #l.103
+yield #l.104
+s d2 On 0 #l.105
+sleep 1 #l.106
+s d3 Mode 0 #l.107
+yield #l.108
+s d2 PressureExternal pressureexter #l.109
+s d3 On 1 #l.110
+add r3 r3 1 #l.111
+seq r2 r3 2 #l.113
+sge r0 r4 pressureexter #l.113
+and r1 r2 r0 #l.113
+beqz r1 110 #l.113
+yield #l.114
+s d3 On 0 #l.115
+s d1 Open 1 #l.116
+sb -1535893860 On 0 #l.117
+sb 1514476632 On 1 #l.118
+j ra #l.119
+j 68 #l.121
+lbn r9 1773255945 -1458014402 On 3 #l.124
+l r8 d5 Setting #l.125
+seq r2 r8 2 #l.126
+seq r1 r9 1 #l.126
+and r0 r2 r1 #l.126
+beqz r0 118 #l.126
+j 154 #l.127
+lbn r7 -1446063838 339221119 Activate 3 #l.129
+bne r7 1 121 #l.130
+j 170 #l.131
+l r4 d4 Pressure #l.133
+bne r3 0 131 #l.134
+sb -1535893860 On 1 #l.135
+sb 1514476632 On 0 #l.136
+s d1 Lock 1 #l.137
+s d1 Open 0 #l.138
+yield #l.139
+s d3 Mode 1 #l.140
+s d3 On 1 #l.141
+add r3 r3 1 #l.142
+seq r2 r3 1 #l.144
+seq r0 r4 0 #l.144
+and r1 r2 r0 #l.144
+beqz r1 143 #l.144
+yield #l.145
+s d3 On 0 #l.146
+sleep 1 #l.147
+s d2 Mode 0 #l.148
+yield #l.149
+s d2 PressureExternal pressureinter #l.150
+s d2 On 1 #l.151
+add r3 r3 1 #l.152
+seq r2 r3 2 #l.154
+sge r0 r4 pressureinter #l.154
+and r1 r2 r0 #l.154
+beqz r1 153 #l.154
+yield #l.155
+s d2 On 0 #l.156
+s d0 Open 1 #l.157
+sb -1535893860 On 0 #l.158
+sb 1514476632 On 1 #l.159
+j ra #l.160
+j 111 #l.162
+s d2 On 0 #l.165
+s d3 On 0 #l.166
+sb -1535893860 On 0 #l.167
+sb 1514476632 On 1 #l.168
+s d2 Lock 0 #l.170
+s d3 Lock 0 #l.171
+s d0 Lock 0 #l.172
+s d1 Lock 0 #l.173
+lbn r9 1773255945 -1458014402 On 3 #l.174
+l r8 d5 Setting #l.175
+sne r2 r8 2 #l.176
+seq r1 r9 0 #l.176
+or r0 r2 r1 #l.176
+beqz r0 169 #l.176
+j 8 #l.177
+j 158 #l.179
+s db Setting 1 #l.182
+s d2 On 0 #l.183
+s d3 On 0 #l.184
+sbn 1462769197 -42357944 Color 4 #l.185
+yield #l.186
+sbn 1462769197 -42357944 Color 5 #l.187
+l r0 d5 Setting #l.188
+seq r2 r0 2 #l.188
+lbn r0 1462769197 -42357944 Activate 3 #l.188
+seq r1 r0 1 #l.188
+and r0 r2 r1 #l.188
+beqz r0 184 #l.188
+s db Setting 0 #l.189
+j 8 #l.190
+j 170 #l.192
+# Compiled at 2025-10-26 15:50 by Exca's Basic10.</Instructions>
 </InstructionData>
