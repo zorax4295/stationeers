@@ -124,6 +124,56 @@ Le programme de contrôle gère la sécurité et les conditions de démarrage du
 
   - Le programme bloque le démarrage et Sas Core ne peut pas démarrer son cycle.
 
+### Conditions à remplir pour démarrer le sas
+
+**Paramètres du réservoir :**
+
+  - Pression : entre 10 MPa et @PressureTank (45 MPa).
+
+  - Température : @TemperatureTarget (20°C) dans une plage de + 1°C.
+
+  - Ratio d’oxygène : 30 % dans une plage de + 0,5 %.
+
+  - Ratio de CO₂ : 2 % dans une plage de + 0,5 %.
+
+  - Ratio de volatiles : 0 %.
+
+  - Ratio de polluants : 0 %.
+
+  - Ratio de nitrous oxyde : 0 %.
+
+  - Ratio de polluants liquides : 0 %.
+
+  - Ratio d’oxyde nitreux liquide : 0 %.
+
+**Paramètres du sas :**
+
+  - Pression : @PressureTarget (100 kPa) dans une plage de + 2 kPa.
+
+  - Température : @TemperatureTarget (20°C) dans une plage de + 1°C.
+
+  - Ratio d’oxygène : 30 % dans une plage de + 0,5 %.
+
+  - Ratio de CO₂ : 2 % dans une plage de + 0,5 %.
+
+  - Ratio de volatiles : 0 %.
+
+  - Ratio de polluants : 0 %.
+
+  - Ratio de nitrous oxyde : 0 %.
+
+  - Ratio de polluants liquides : 0 %.
+
+  - Ratio d’oxyde nitreux liquide : 0 %.
+
+**Si toute ses condition son remplie alors la Diode Cyle Pret passe au vert et le sas se lance si ses condition son vrai :** 
+
+  - **Activation du levier cycle sas :** L’interrupteur de cycle SAS est activé (Variable Open = 0).
+
+  - **Accès utilisateur :** L’Access Reader envoie un signal valide (Setting ≠ 0).
+
+  - **Signal SOS :** Aucun signal SOS n’est actif.
+
 ## Fonctionnement du Programme d’Accès
 
 Le programme d’accès gère l’autorisation d’entrée au sas à l’aide d’un lecteur de carte.
@@ -145,6 +195,7 @@ Le lecteur de carte affiche une couleur selon le type d’accès accordé :
 🟡 Jaune → Carte acceptée avec accès maintenance
 
 🔴 Rouge → Carte refusée
+
 
 
 
