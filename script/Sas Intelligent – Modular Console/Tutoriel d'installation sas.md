@@ -29,3 +29,6 @@ Les noms indiqués dans la colonne Nom requis doivent être appliqués exactemen
 | Ventilateur extérieur | ———— | Pin 3 | ———— |
 | Capteur de gaz du sas | ———— | Pin 4 | ———— |
 | Housing Access | Connexion vers le programme Access | Pin 5 | ———— |
+| Bouton SOS | Déclenche une alarme et interrompt le sas | Batch name | SOS |
+| Interrupteur Maintenance | Active le mode maintenance | Batch name | Maintenance |
+| Bouton Acquittement SOS | Réinitialise l’état SOS | Batch name | Acquiter SOS |
