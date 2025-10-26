@@ -138,3 +138,49 @@ define temperaturetarget 293
 ```
 
 (Le sas sera considéré prêt si la température est comprise entre 21 °C et 23 °C.)
+
+## Paramètres disponibles programme [Access Control](access%20Control/instruction.xml)
+
+### 🔧 Constantes configurables
+
+### `@acceditationBlanc`, `@acceditationVert`, `@acceditationJaune`, `@acceditationRose`, `@acceditationNoir`
+
+**Valeurs possibles :**
+
+  - 0 → Aucun accès
+
+  - 1 → Accès normal
+
+  - 2 → Accès maintenance (inclut aussi l’accès normal)
+
+**Rôle :**
+
+Ces constantes définissent le niveau d’autorisation attribué à chaque couleur de carte.
+Elles permettent à l’utilisateur de déterminer quels types d’accès sont accordés pour chaque badge.
+
+**Principe :**
+
+Le programme vérifie la carte insérée dans le lecteur :
+
+  - 0 → Carte refusée
+
+  - 1 → Accès normal autorisé
+
+  - 2 → Accès maintenance (fonctionnement normal + maintenance)
+
+**Personnalisation :**
+
+Ces valeurs peuvent être modifiées selon les besoins.
+
+Exemple :
+```vb
+define acceditationblanc 1  # Accès normal
+define acceditationnoir 2   # Accès normal + maintenance
+```
+
+> [!NOTE]
+> Limitation connue :
+> 
+> Si deux cartes sont insérées en même temps dans deux lecteurs différents,
+> le système interprète cela comme une erreur et refuse l’accès,
+> même si les deux cartes sont valides.
