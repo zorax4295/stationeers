@@ -54,3 +54,70 @@ define pressureexter 25
 **Utilité :** permet de choisir le sens de fonctionnement par défaut après un redémarrage.
 Le programme alterne automatiquement le sens après chaque cycle complet.
 
+## Paramètres disponibles programme [Contrôle](controle%20sas/instruction.xml)
+
+Ce document présente les constantes que l’utilisateur peut modifier pour adapter le comportement du programme de contrôle du sas à son installation.
+Ces constantes influencent principalement les valeurs de référence utilisées pour l’affichage, les tests de conditions et la supervision du système.
+
+### 🔧 Constantes configurables
+@PressureInterMax
+
+Valeur par défaut : 300 kPa
+
+Rôle : Définit la valeur maximale affichée sur la jauge de pression du sas (gaugePressureSas).
+
+Utilité : Cette constante est purement esthétique — elle sert uniquement à l’échelle d’affichage de la jauge.
+
+Personnalisation :
+
+Peut être abaissée à la pression cible du sas (ex. 100 kPa) pour un affichage “plein” lorsque le sas est à pression normale.
+
+Ou conservée à 300 kPa pour indiquer la pression maximale que la structure peut supporter.
+
+Exemple :
+
+const @PressureInterMax = 100kPa
+
+
+(La jauge affichera 100 % lorsque le sas atteindra 100 kPa.)
+
+@PressureTarget
+
+Valeur par défaut : 100 kPa
+
+Rôle : Définit la pression cible du sas, utilisée dans la fonction testCycleRoom() pour vérifier si la salle est stable avant le démarrage du cycle.
+
+Utilité : Cette constante affecte directement la logique du programme :
+le cycle ne démarre que si la pression ambiante est comprise dans une plage de ±2 kPa autour de cette valeur.
+
+Personnalisation :
+
+Peut être modifiée selon la pression de travail normale de votre environnement.
+
+Exemple :
+
+const @PressureTarget = 95kPa
+
+
+(Le sas sera considéré prêt si la pression est comprise entre 93 et 97 kPa.)
+
+@PressureTank
+
+Valeur par défaut : 45 MPa
+
+Rôle : Définit la pression maximale autorisée pour le réservoir.
+Utilisée à la fois :
+
+dans la fonction testCycleSas() pour vérifier la sécurité du réservoir,
+
+et comme valeur de référence pour la jauge de pression du réservoir (gaugePressureTank).
+
+Utilité : Cette constante influence la sécurité du système — si la pression dépasse ce seuil, le cycle ne sera pas autorisé.
+
+Personnalisation :
+
+À ajuster selon la pression de service réelle de vos réservoirs.
+
+Exemple :
+
+const @PressureTank = 30MPa
