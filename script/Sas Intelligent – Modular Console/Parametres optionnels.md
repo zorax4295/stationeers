@@ -118,3 +118,23 @@ define pressuretarget 95
 ```vb
 define pressuretank 45000
 ```
+
+### @TemperatureTarget
+
+**Valeur par défaut :** `20 °C`
+
+**Rôle :** Définit la température cible de référence pour le sas et le réservoir.
+Utilisée dans les fonctions testCycleSas() et testCycleRoom() pour vérifier que la température mesurée reste dans une plage de ±1 °C autour de cette valeur.
+
+**Utilité :** Cette constante influence directement la logique de validation du cycle — le cycle ne pourra démarrer que si la température du sas et du réservoir est proche de cette valeur.
+
+**Personnalisation :**
+
+Peut être ajustée selon la température de fonctionnement de votre base.
+
+Exemple :
+```vb
+define temperaturetarget 293
+```
+
+(Le sas sera considéré prêt si la température est comprise entre 21 °C et 23 °C.)
