@@ -32,3 +32,10 @@ Les noms indiqués dans la colonne Nom requis doivent être appliqués exactemen
 | Bouton SOS | Déclenche une alarme et interrompt le sas | Batch name | SOS |
 | Interrupteur Maintenance | Active le mode maintenance | Batch name | Maintenance |
 | Bouton Acquittement SOS | Réinitialise l’état SOS | Batch name | Acquiter SOS |
+| Flashing Light | Indication visuelle de fonctionnement | Batch | ———— |
+| Light round | Éclaire le sas | Batch | ———— |
+| Gauge pression tank | Mesure la pression du tank | Batch name | Pressure Tank |
+| Gauge pression sas | Mesure la pression du sas | Batch name | Pressure sas |
+| Housing Control | Connexion vers le programme control | Batch name | IC Housing control |
+
+### 🧩 Programme Control
