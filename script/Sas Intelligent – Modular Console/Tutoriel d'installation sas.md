@@ -58,12 +58,12 @@ Les noms indiqués dans la colonne Nom requis doivent être appliqués exactemen
 
 ## ✅ Test initial
 
-- [ ] Allumez l’APC ou le transformateur d’alimentation.
+- Allumez l’APC ou le transformateur d’alimentation.
 
-- [ ] Insérez une carte d’accès valide dans le lecteur.
+- Insérez une carte d’accès valide dans le lecteur.
 
-- [ ] Vérifiez que la diode "Cycle Prêt" devient verte.
+- Vérifiez que la diode "Cycle Prêt" devient verte.
 
-- [ ] Activez l’interrupteur Cycle Sas pour lancer le premier test.
+- Activez l’interrupteur Cycle Sas pour lancer le premier test.
 
-Surveillez les jauges de pression
+- Surveillez les jauges de pression
