@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <InstructionData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <DateTime>134058577355129434</DateTime>
+  <DateTime>134058593455204513</DateTime>
   <GameVersion>0.2.5954.26176</GameVersion>
   <Title>controle sas avec ic 3.0 basic</Title>
   <Description>besoin de - sas avec ic 3.0 basic</Description>
@@ -9,172 +9,177 @@
   <Instructions>define pressureintermax 300 #l.28
 define pressuretarget 100 #l.29
 define pressuretank 45000 #l.30
-yield #l.38
-lbn r11 -1095397205 -416464569 Open 2 #l.39
-move sp 6 #l.39
-push r11 #l.39
-l r11 d0 Setting #l.40
+define temperaturetarget 293.15 #l.31
+yield #l.39
+lbn r11 -1095397205 -416464569 Open 2 #l.40
+move sp 6 #l.40
 push r11 #l.40
-l r11 d1 Setting #l.41
+l r11 d0 Setting #l.41
 push r11 #l.41
-l r0 d3 Pressure #l.44
-div r1 r0 pressuretank #l.44
-sbn -1013553731 294108521 Setting r1 #l.44
-l r0 d2 Pressure #l.45
-div r1 r0 pressureintermax #l.45
-sbn -1013553731 -673679062 Setting r1 #l.45
-jal 51 #l.48
-jal 109 #l.48
-move sp 11 #l.48
-pop r11 #l.48
-pop r12 #l.48
-and r0 r11 r12 #l.48
-beqz r0 28 #l.48
+l r11 d1 Setting #l.42
+push r11 #l.42
+l r0 d3 Pressure #l.45
+div r1 r0 pressuretank #l.45
+sbn -1013553731 294108521 Setting r1 #l.45
+l r0 d2 Pressure #l.46
+div r1 r0 pressureintermax #l.46
+sbn -1013553731 -673679062 Setting r1 #l.46
+jal 52 #l.49
+jal 112 #l.49
 move sp 11 #l.49
-push 1 #l.49
-sbn 1829854055 -1952270472 Color 2 #l.50
-j 31 #l.53
-move sp 11 #l.54
-push 0 #l.54
-sbn 1829854055 -1952270472 Color 4 #l.55
-move sp 7 #l.59
-pop r11 #l.59
-seq r4 r11 0 #l.59
-move sp 8 #l.59
-pop r11 #l.59
-sne r3 r11 0 #l.59
-move sp 9 #l.59
-pop r11 #l.59
-sne r2 r11 1 #l.59
-move sp 12 #l.59
-pop r11 #l.59
-seq r1 r11 1 #l.59
-and r0 r2 r1 #l.59
-and r1 r3 r0 #l.59
-and r0 r4 r1 #l.59
-beqz r0 50 #l.59
-yield #l.60
-sbn -1095397205 -416464569 Open 1 #l.61
-s db Setting 1 #l.62
-j 3 #l.64
-l r11 d3 Pressure #l.67
-l r12 d3 Temperature #l.68
-move sp 13 #l.68
-push r12 #l.68
-l r12 d3 RatioOxygen #l.69
+pop r11 #l.49
+pop r12 #l.49
+and r0 r11 r12 #l.49
+beqz r0 29 #l.49
+move sp 11 #l.50
+push 1 #l.50
+sbn 1829854055 -1952270472 Color 2 #l.51
+j 32 #l.54
+move sp 11 #l.55
+push 0 #l.55
+sbn 1829854055 -1952270472 Color 4 #l.56
+move sp 7 #l.60
+pop r11 #l.60
+seq r4 r11 0 #l.60
+move sp 8 #l.60
+pop r11 #l.60
+sne r3 r11 0 #l.60
+move sp 9 #l.60
+pop r11 #l.60
+sne r2 r11 1 #l.60
+move sp 12 #l.60
+pop r11 #l.60
+seq r1 r11 1 #l.60
+and r0 r2 r1 #l.60
+and r1 r3 r0 #l.60
+and r0 r4 r1 #l.60
+beqz r0 51 #l.60
+yield #l.61
+sbn -1095397205 -416464569 Open 1 #l.62
+s db Setting 1 #l.63
+j 4 #l.65
+l r11 d3 Pressure #l.68
+l r12 d3 Temperature #l.69
+move sp 13 #l.69
 push r12 #l.69
-l r12 d3 RatioCarbonDioxide #l.70
+l r12 d3 RatioOxygen #l.70
 push r12 #l.70
-l r12 d3 RatioVolatiles #l.71
+l r12 d3 RatioCarbonDioxide #l.71
 push r12 #l.71
-l r12 d3 RatioPollutant #l.72
+l r12 d3 RatioVolatiles #l.72
 push r12 #l.72
-l r12 d3 RatioLiquidPollutant #l.73
+l r12 d3 RatioPollutant #l.73
 push r12 #l.73
-l r12 d3 RatioNitrousOxide #l.74
+l r12 d3 RatioLiquidPollutant #l.74
 push r12 #l.74
-l r10 d3 RatioLiquidNitrousOxide #l.75
-sle r1 r11 45000 #l.76
-sge r0 r11 10000 #l.76
-move sp 12 #l.76
-push r11 #l.76
-and r8 r1 r0 #l.76
-move sp 14 #l.76
-pop r11 #l.76
-sap r7 293.15 r11 0.00341 #l.76
-move sp 15 #l.76
-pop r11 #l.76
-sap r5 0.3 r11 0.01667 #l.76
-move sp 16 #l.76
-pop r11 #l.76
-sap r4 0.02 r11 0.25 #l.76
-move sp 17 #l.77
+l r12 d3 RatioNitrousOxide #l.75
+push r12 #l.75
+l r10 d3 RatioLiquidNitrousOxide #l.76
+sle r1 r11 45000 #l.77
+sge r0 r11 10000 #l.77
+move sp 12 #l.77
+push r11 #l.77
+and r9 r1 r0 #l.77
+abs r0 temperaturetarget #l.77
+div r1 1 r0 #l.77
+move sp 14 #l.77
 pop r11 #l.77
-seq r9 r11 0 #l.77
-move sp 18 #l.77
+sap r7 temperaturetarget r11 r1 #l.77
+move sp 15 #l.77
 pop r11 #l.77
-seq r6 r11 0 #l.77
-move sp 20 #l.77
+sap r5 0.3 r11 0.01667 #l.77
+move sp 16 #l.77
 pop r11 #l.77
-seq r3 r11 0 #l.77
-pop r11 #l.77
-seq r2 r11 0 #l.77
-seq r1 r10 0 #l.77
-and r0 r2 r1 #l.77
-and r2 r3 r0 #l.77
-and r1 r6 r2 #l.77
+sap r4 0.02 r11 0.25 #l.77
+move sp 17 #l.78
+pop r11 #l.78
+seq r8 r11 0 #l.78
+move sp 18 #l.78
+pop r11 #l.78
+seq r6 r11 0 #l.78
+move sp 20 #l.78
+pop r11 #l.78
+seq r3 r11 0 #l.78
+pop r11 #l.78
+seq r2 r11 0 #l.78
+seq r0 r10 0 #l.78
+and r1 r2 r0 #l.78
+and r0 r3 r1 #l.78
+and r1 r6 r0 #l.78
+and r0 r8 r1 #l.78
+and r1 r4 r0 #l.77
+and r0 r5 r1 #l.77
+and r1 r7 r0 #l.77
 and r0 r9 r1 #l.77
-and r1 r4 r0 #l.76
-and r0 r5 r1 #l.76
-and r1 r7 r0 #l.76
-and r0 r8 r1 #l.76
-beqz r0 106 #l.76
-move sp 10 #l.78
-push 1 #l.78
-j ra #l.78
-move sp 10 #l.80
-push 0 #l.80
-j ra #l.80
-l r11 d4 Pressure #l.83
-move sp 12 #l.83
-push r11 #l.83
-l r11 d4 Temperature #l.84
+beqz r0 109 #l.77
+move sp 10 #l.79
+push 1 #l.79
+j ra #l.79
+move sp 10 #l.81
+push 0 #l.81
+j ra #l.81
+l r11 d4 Pressure #l.84
+move sp 12 #l.84
 push r11 #l.84
-l r11 d4 RatioOxygen #l.85
+l r11 d4 Temperature #l.85
 push r11 #l.85
-l r11 d4 RatioCarbonDioxide #l.86
+l r11 d4 RatioOxygen #l.86
 push r11 #l.86
-l r11 d4 RatioVolatiles #l.87
+l r11 d4 RatioCarbonDioxide #l.87
 push r11 #l.87
-l r11 d4 RatioPollutant #l.88
+l r11 d4 RatioVolatiles #l.88
 push r11 #l.88
-l r11 d4 RatioLiquidPollutant #l.89
+l r11 d4 RatioPollutant #l.89
 push r11 #l.89
-l r11 d4 RatioNitrousOxide #l.90
+l r11 d4 RatioLiquidPollutant #l.90
 push r11 #l.90
-l r10 d4 RatioLiquidNitrousOxide #l.91
-add r0 pressuretarget 2 #l.92
-move sp 13 #l.92
-pop r11 #l.92
-sle r2 r11 r0 #l.92
-sub r1 pressuretarget 2 #l.92
-sge r0 r11 r1 #l.92
-and r8 r2 r0 #l.92
-move sp 14 #l.92
-pop r11 #l.92
-sap r7 293.15 r11 0.00341 #l.92
-move sp 15 #l.92
-pop r11 #l.92
-sap r5 0.3 r11 0.01667 #l.92
-move sp 16 #l.92
-pop r11 #l.92
-sap r4 0.02 r11 0.25 #l.92
-move sp 17 #l.93
+l r11 d4 RatioNitrousOxide #l.91
+push r11 #l.91
+l r10 d4 RatioLiquidNitrousOxide #l.92
+add r0 pressuretarget 2 #l.93
+move sp 13 #l.93
 pop r11 #l.93
-seq r9 r11 0 #l.93
-move sp 18 #l.93
+sle r2 r11 r0 #l.93
+sub r1 pressuretarget 2 #l.93
+sge r0 r11 r1 #l.93
+and r9 r2 r0 #l.93
+abs r0 temperaturetarget #l.93
+div r1 1 r0 #l.93
+move sp 14 #l.93
 pop r11 #l.93
-seq r6 r11 0 #l.93
-move sp 20 #l.93
+sap r7 temperaturetarget r11 r1 #l.93
+move sp 15 #l.93
 pop r11 #l.93
-seq r3 r11 0 #l.93
+sap r5 0.3 r11 0.01667 #l.93
+move sp 16 #l.93
 pop r11 #l.93
-seq r2 r11 0 #l.93
-seq r0 r10 0 #l.93
-and r1 r2 r0 #l.93
-and r0 r3 r1 #l.93
-and r1 r6 r0 #l.93
+sap r4 0.02 r11 0.25 #l.93
+move sp 17 #l.94
+pop r11 #l.94
+seq r8 r11 0 #l.94
+move sp 18 #l.94
+pop r11 #l.94
+seq r6 r11 0 #l.94
+move sp 20 #l.94
+pop r11 #l.94
+seq r3 r11 0 #l.94
+pop r11 #l.94
+seq r2 r11 0 #l.94
+seq r0 r10 0 #l.94
+and r1 r2 r0 #l.94
+and r0 r3 r1 #l.94
+and r1 r6 r0 #l.94
+and r0 r8 r1 #l.94
+and r1 r4 r0 #l.93
+and r0 r5 r1 #l.93
+and r1 r7 r0 #l.93
 and r0 r9 r1 #l.93
-and r1 r4 r0 #l.92
-and r0 r5 r1 #l.92
-and r1 r7 r0 #l.92
-and r0 r8 r1 #l.92
-beqz r0 167 #l.92
-move sp 9 #l.94
-push 1 #l.94
-j ra #l.94
-move sp 9 #l.96
-push 0 #l.96
-j ra #l.96
-# Compiled at 2025-10-26 08:22 by Exca's Basic10.</Instructions>
+beqz r0 172 #l.93
+move sp 9 #l.95
+push 1 #l.95
+j ra #l.95
+move sp 9 #l.97
+push 0 #l.97
+j ra #l.97
+# Compiled at 2025-10-26 08:44 by Exca's Basic10.</Instructions>
 </InstructionData>
