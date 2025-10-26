@@ -58,7 +58,6 @@ Le programme alterne automatiquement le sens après chaque cycle complet.
 
 Ces constantes influencent principalement les valeurs de référence utilisées pour l’affichage, les tests de conditions et la supervision du système.
 
-### 🔧 Constantes configurables
 ### @PressureInterMax
 
 **Valeur par défaut :** `300 kPa`
@@ -141,8 +140,6 @@ define temperaturetarget 293
 
 ## Paramètres disponibles programme [Access Control](access%20Control/instruction.xml)
 
-### 🔧 Constantes configurables
-
 ### `@acceditationBlanc`, `@acceditationVert`, `@acceditationJaune`, `@acceditationRose`, `@acceditationNoir`
 
 **Valeurs possibles :**
@@ -184,3 +181,4 @@ define acceditationnoir 2   # Accès normal + maintenance
 > Si deux cartes sont insérées en même temps dans deux lecteurs différents,
 > le système interprète cela comme une erreur et refuse l’accès,
 > même si les deux cartes sont valides.
+
