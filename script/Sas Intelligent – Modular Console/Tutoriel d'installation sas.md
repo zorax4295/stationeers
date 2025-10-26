@@ -34,8 +34,24 @@ Les noms indiqués dans la colonne Nom requis doivent être appliqués exactemen
 | Bouton Acquittement SOS | Réinitialise l’état SOS | Batch name | Acquiter SOS |
 | Flashing Light | Indication visuelle de fonctionnement | Batch | ———— |
 | Light round | Éclaire le sas | Batch | ———— |
-| Gauge pression tank | Mesure la pression du tank | Batch name | Pressure Tank |
-| Gauge pression sas | Mesure la pression du sas | Batch name | Pressure sas |
 | Housing Control | Connexion vers le programme control | Batch name | IC Housing control |
 
 ### 🧩 Programme Control
+
+| Appareil | Commentaire | Connexion | Nom de l'appareil |
+| :------: | :---------: | :-------: | :---------------: |
+| Housing Access | Connexion vers le programme Access | Pin 0 | ———— |
+| Housing Core | Connexion vers le programme Core | Pin 1 |	———— |
+| Capteur de gaz du sas | Vérifie la pression du sas | Pin 2 |	———— |
+| Pipe analiser du tank |	Analyse la composition du tank | Pin 3 |	———— |
+| Capteur de gaz de la salle intérieur | Analyse la composition de la salle intérieur | Pin 4 |	———— |
+| Diode Cycle Prêt | Indique si le sas peut être lancé | Batch name | Diode Cyle Pret |
+| levier de lancement du cycle | Lance un cycle de sas | Batch name |	cycle sas |
+| Gauge pression tank | Mesure la pression du tank | Batch name | Pressure Tank |
+| Gauge pression sas | Mesure la pression du sas | Batch name | Pressure sas |
+
+### 🪪 Programme Access
+
+| Appareil | Commentaire | Connexion | Nom de l'appareil |
+| :------: | :---------: | :-------: | :---------------: |
+| Access Card Reader | Permet la lecture des cartes | Batch name | Access Card Reader |
