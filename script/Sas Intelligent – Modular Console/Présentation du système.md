@@ -3,7 +3,7 @@
 
 Ce système de sas automatisé permet de gérer l’ouverture et la fermeture des portes, la ventilation et la sécurité du sas de manière autonome. Il utilise des appareils du mod Modular Consol pour contrôler le sas et superviser les conditions de pression et de sécurité.
 
-## Le système est composé de trois programmes indépendants :
+## Le système est composé de trois programmes dépendants des un et des autre :
 
 - Sas Core : gère le fonctionnement interne du sas (portes, ventilation, éclairage).
 
