@@ -21,3 +21,85 @@ Liste des déclaration possible :
 | a = "hello"  | string     | Chaîne de caractères                             |
 | a = true     | boolean    | Booléen                                          |
 | a = {1,2,3}  | table      | Table (structure de données)                     |
+
+# Lecture/Ecriture [Doc officiel](https://orbitalfoundrymodteam.github.io/StationeersLuaDocs/api/device-io.html)
+Pour lire une valeur nous utilison **ic.read(device, logicType)** exemple :
+```lua
+local temp = ic.read(0, LT.Temperature)
+```
+Pareil pour l'écriture d'une valeur avec **ic.write(device, logicType, value)** exemple :
+```lua
+ic.write(0, LT.On, 1)
+```
+
+
+# Les table :
+## Déclaration de base :
+exemple de table avec valeurs initiales :
+```lua
+table = {10, 20, 30}
+print(t[1])  -- 10
+print(t[2])  -- 20
+```
+exemple de table avec clés personnalisées :
+```lua
+local table = {name="Light", pin=0, state=true}
+print(table.name)  -- Light
+print(table["pin"]) -- 0
+```
+Son utilisation peut se faire avec **table.key** ou **table["key"]**
+> [!TIP]
+> A savoir les deux exemple de table peuvent être mélanger
+## Tableaux imbriquée :
+### Table indexée numériquement :
+```lua
+local devices = {
+  {name="porte_interieur", open=nil},   -- index 1
+  {name="porte_exterieur", open=nil},   -- index 2
+  {name="light", on=nil}                -- index 3
+}
+```
+Chaque élément a un indice numérique automatique (1, 2, 3…)<br>
+Exemple pour acceder à un élément spécifique :
+```lua
+print(devices[1].name)  -- Affiche "porte_interieur"
+print(devices[2].open)  -- Affiche nil
+```
+### Table indexée par string
+```lua
+local devices = {
+  porte_interieur = {open=nil, lock=nil},
+  porte_exterieur = {open=nil},
+  light = {on=nil}
+}
+```
+Chaque élément a une clé string ("porte_interieur", "porte_exterieur", "light")<br>
+Exemple pour acceder à un élément spécifique :
+```lua
+print(devices.porte_interieur.open)  -- Affiche nil (état d'ouverture)
+print(devices.porte_interieur.lock)  -- Affiche nil (état de verrouillage)
+```
+
+# Enumerations :
+Les énumeration permette d'exposer les variable des appareil, lua n'a pas une syntaxe précise mais il faut garder chaque argument dans le bonne ordre et preciser quand ses un LogicType un LogicSlotType ect.<br>
+Liste des logic type :
+```lua
+local LT  = ic.enums.LogicType         -- On, Off, Temperature, Pressure, ...
+local LST = ic.enums.LogicSlotType      -- Occupied, Quantity, Charge, ...
+local LBM = ic.enums.LogicBatchMethod   -- Average, Sum, Minimum, Maximum
+local LRM = ic.enums.LogicReagentMode   -- TotalContents, ...
+```
+exemple d'utilisation :
+```lua
+local LT = ic.enums.LogicType
+print("Script initialized")
+
+while true do
+  local switchState = ic.read(1, LT.Open)
+  ic.write(0, LT.On, switchState)
+  sleep(0)
+end
+```
+Dans se script pour l'ecriture ou la lecture le 2ème argument est toujour le LogicType ect mais il faut exposer le LogicType sinon le script ne le vois pas
+> [!TIP]
+> A savoir la variable LT sert a reutiliser facilement le Logictype ses plus compacte que d'utiliser "ic.enums.LogicType" partout
