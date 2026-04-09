@@ -23,7 +23,22 @@ H = screens.main.surface:size().h
 Regardon la liste des ecran, dedans nous y créeons une table puis y ajoutant un ecran avec son nom.
 Maintenant grace a la function create_screen elle nous permet de créer automatiquement des parametre pour chaque ecran que nous déclarons dans la table.
 Enfin la taille physique de l'ecran est recuperer tout en bas puis stocker dans les variables W pour la longueur et H pour la hauteur
-
+## Syntaxe d’utilisation des écrans :
+### Activation d’un écran
+Syntaxe :
+```lua
+screens.<nom_ecran>.activate()
+```
+### Accès à la surface d’un écran
+Syntaxe :
+```lua
+screens.<nom_ecran>.surface
+```
+Donne accès à la surface UI de l’écran, permettant de créer des éléments graphiques.
+Par exemple :
+```lua
+local title = screens.main.surface:element({})
+```
 # Récupération de l'heure du jeux et du jour
 ```lua
 TIME = "day " .. util.days_past()-1 .. " | " .. util.clock_time("HH:MM")
