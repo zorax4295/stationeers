@@ -103,3 +103,26 @@ end
 Dans se script pour l'ecriture ou la lecture le 2ème argument est toujour le LogicType ect mais il faut exposer le LogicType sinon le script ne le vois pas
 > [!TIP]
 > A savoir la variable LT sert a reutiliser facilement le Logictype ses plus compacte que d'utiliser "ic.enums.LogicType" partout
+
+#Convertion de température :
+Il est possible en lua de convertire une unité de température en une autre via :
+```lua
+util.temp(value, from, to)
+```
+Unités : « K » (Kelvin), « C » (Celsius), « F » (Fahrenheit). Insensible à la casse.
+```lua
+-- Stationeers sensors report Kelvin — convert to Celsius
+local tempK = ic.read(0, ic.enums.LogicType.Temperature)
+local tempC = util.temp(tempK, "K", "C")
+print(tempC)  -- 21.85
+
+-- Celsius to Fahrenheit
+local tempF = util.temp(tempC, "C", "F")
+print(tempF)  -- 71.33
+
+-- Fahrenheit back to Kelvin
+local tempK2 = util.temp(tempF, "F", "K")
+print(tempK2)  -- 295.0
+```
+> [!NOTE]
+> Le paramètre **from** est par défaut "K" et **to** par défaut "C", donc util.temp(295) est un raccourci rapide Kelvin → Celsius.
