@@ -32,8 +32,8 @@ Un exemple simple un label dans un cadre coloré :
 local header = ui:element({
     id = "header",
     type = "panel",
-    rect = { unit = "px", x = 0, y = 0, w = 480, h = 60 },
-    style = { bg = "#111827" }
+    rect = { unit = "px", x = 0, y = 0, w = 480, h = 60 }, -- en uniter on a soit px en pixel soi % en pourcentage
+    style = { bg = "#111827" } --couleur en hexadecimal
 })
 
 header:element({
