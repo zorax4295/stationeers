@@ -127,3 +127,32 @@ print(tempK2)  -- 295.0
 ```
 > [!NOTE]
 > Le paramètre **from** est par défaut "K" et **to** par défaut "C", donc util.temp(295) est un raccourci rapide Kelvin → Celsius.
+
+# Message direct
+## Envoyer un message :
+```lua
+ic.net.send("Housing - Larre Hydroponic storage", "alert", "Hello World!")
+```
+syntaxe : ic.net.send(ic.net.send(target, tag, value))
+la target peut soit être l'id de la cible ou alors son nom en string et la value peut être soit
+- boolean
+- number
+- string
+- table
+## Recevoir un message
+Pour commencer il faut créer la function qui va executer le code une fois le message reçus :
+```lua
+local function onAlert(fromId, fromName, payload)
+    print("Message reçu de " .. fromName)
+    print("Contenu : " .. tostring(payload))
+end
+```
+Ensuite il faut s'enregistrer pour ecouter en gros pour faire un simple par défaut l'ic housing n'ecoute rien il faut enregistrer un tag sur la liste d'écoute exemple :
+```lua
+ic.net.listen("alert", onAlert)
+```
+Cette commande ecoute tout les message aillent le tag "alert" si un autre ic hosuing envoie un message au notre avec le tag "info" et qu'il ne ses pas enregistrer alors tout les message aillant le tag "info" seron tout simplement ignoré puisque notre ic housing ne les ecoute pas.
+Pour arrêter d'écouter des message il faut se désanregistrer en specifiant le tag et nil exemple :
+```lua
+ic.net.listen("alerts", nil)
+```
